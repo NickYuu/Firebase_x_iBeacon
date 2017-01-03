@@ -149,8 +149,9 @@ extension BeaconViewController: CLLocationManagerDelegate {
             
             locationManager.startRangingBeacons(in: beaconRegion)
         } else {
-            
-            
+            if let index = currentRegions.index(of: beaconRegion) {
+                currentRegions.remove(at: index)
+            }
             locationManager.stopRangingBeacons(in: beaconRegion)
         }
         showLocalNotification(msg)
@@ -212,6 +213,7 @@ extension BeaconViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         print("點擊了:\(indexPath.row)")
     }
 }
