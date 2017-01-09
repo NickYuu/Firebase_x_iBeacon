@@ -113,24 +113,6 @@ extension MessageViewController {
             })
         })
         
-        
-//        msgRef?.runTransactionBlock({ (currentData) -> FIRTransactionResult in
-//            guard var array = currentData.value as? [String] else { return FIRTransactionResult.success(withValue: currentData)
-//            }
-//            
-//            array = self.msgs
-//            
-//            currentData.value = array
-//            
-//            return FIRTransactionResult.success(withValue: currentData)
-//            
-//        }, andCompletionBlock: { (error, committed, snapshot) in
-//            if let error = error {
-//                print(error.localizedDescription)
-//            }
-//        }, withLocalEvents: false)
-        
-        
     }
     
 }

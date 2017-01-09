@@ -15,5 +15,4 @@ extension UserDefaults {
         get { return string(forKey: key.rawValue) }
     }
     
-    
 }
